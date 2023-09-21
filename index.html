@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Sms Chat</title>
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Atomic+Age&family=Croissant+One&display=swap" rel="stylesheet">
+    <!-- link For Empty Field and send sms alert -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</head>
+<body>
+
+    
+    <button class="btn btn-danger position-fixed cursor-pointer open-button" onclick="openForm()">Chat</button>
+    
+    <div class="chat-popup position-fixed rounded" id="myForm">
+      <form action="https://formspree.io/f/xjvqaedb" method="POST" class="form-control needs-validation" novalidate>
+        <h1 class="">Chat</h1>
+    
+        <label for="message" class="form-check-label mb-2"><b>Message</b></label>
+        <textarea name="message" id="message" rows="5" placeholder="Type message...." class="form-control mb-3 txt-area" required></textarea>
+    
+        <div class="d-grid gap-2">
+          <button type="submit" id="submit" class="btn btn-primary btn-block">Send</button>
+          <button type="button" class="btn btn-danger btn-block" onclick="closeForm()">Close</button>
+        </div>
+      </form>
+    </div>
+
+
+    <!-- Custom Js -->
+    <script src="./main.js"></script>
+    <!-- Bootstrap Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Sweet Alert Link -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>
